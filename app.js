@@ -50,12 +50,6 @@ const handleSubscription = (e) => {
 // subcribe btn add event
 subscribeBtn.addEventListener("click",handleSubscription);
 
-emailInput.addEventListener("keydown",(e) => {
-  if(e.key === "Enter"){
-    handleSubscription(e);
-  }
-})
-
 emailInput.addEventListener('input', () => {
   if (emailItem.classList.contains('invalid')) {
     emailItem.classList.remove('invalid');
