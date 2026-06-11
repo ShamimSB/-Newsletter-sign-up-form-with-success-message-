@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(235, 18%, 26%);
+}
+.parent-container{
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  padding: 20px;
+  border-radius: 26px;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.container{
+  padding: 40px 20px;
+  max-width: 380px;
+}
+.first{
+  font-size: 2.8rem;
+  color: hsl(234, 29%, 20%);
+  padding: 20px 0;
+}
+.para{
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.check-box{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+.check-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-item label{
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.check-item input[type="checkbox"] {
+  appearance: none;
+  /* webkit-appearance: none; */
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0; 
+  
+  background-image: url('./assets/images/icon-list.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.check-item label {
+  font-size: 14px;
+  color: hsl(235, 18%, 26%);
+  cursor: pointer;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px; 
+}
+
+.email-item input {
+  width: 100%;
+  display: block; 
+  box-sizing: border-box; 
+  padding: 16px;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 8px;
+  outline: none;
+  margin-top: 14px;
+  margin-bottom: 36px;
+}
+
+.error-message {
+  display: none;
+  color: hsl(4, 100%, 67%); 
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.email-item.invalid .error-message {
+  display: block;
+}
+
+.email-item.invalid input {
+  border-color: hsl(4, 100%, 67%) !important;
+  background-color: hsla(4, 100%, 67%, 0.15) !important;
+  color: hsl(4, 100%, 67%) !important;
+}
+
+.btn{
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+} 
+.btn:hover{
+  background: linear-gradient(90deg, hsl(346, 100%, 66%), hsl(14, 92%, 64%));
+  box-shadow: 0px 10px 20px rgba(255,98,87,0.4);
+}
+/* Desktop Success */
+.success-card{
+  background-color: #fff;
+  max-width: 400px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: none;
+}
+.success-icon{
+  background-size: contain;
+}
+.success-heading{
+  color: hsl(234, 29%, 20%);
+  margin: 20px 0;
+  font-size: 2.8rem;
+}
+.success-text{
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 30px;
+}
+
+
+/* Mobile Success */
+.mobile{
+  display: none;
+}
+
+.success-card2{
+  background-color: #fff;
+  padding: 80px 20px;
+  margin-top: 20px;
+  max-width: 350px;
+  max-height: 900px;
+  margin: 0 auto;
+  display: none;
+}
+.footer-div {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh; 
+}
+.success-text {
+  color: hsl(235, 18%, 26%);
+  flex-grow: 1; 
+  margin-bottom: 30px; 
+}
+.dismiss-btn2 {
+  margin-top: auto; 
+}
+
+/* Media Query */
+
+@media (max-width: 450px) {
+ .parent-container{
+  flex-direction: column-reverse;
+  padding: 0;
+  border-radius: 0;
+  width: 375px;
+ }
+ .parent-container .desktop{
+  display: none;
+ }
+ .parent-container .mobile{
+  display: block;
+ }
+ .container{
+  padding: 20px;
+ }
+ .email-item input{
+  padding: 18px 10px;
+  font-size: 16px;
+}
+.btn{
+  padding: 20px 16px;
+  margin-bottom: 20px;
+}
+}
